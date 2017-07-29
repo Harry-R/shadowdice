@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Shadowdice</string>
+    <string name="headline">Headline</string>
+    <string name="textfield">textfield</string>
 </resources>

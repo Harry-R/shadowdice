@@ -12,5 +12,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/headline"
+        android:id="@+id/txtv_headline"
+        android:layout_marginBottom="16dp"
+        android:textSize="20dp"
+        android:textColor="#000"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/numpicker"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtv_headline">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/numpicker"
+        android:layout_below="@id/txtv_headline"
+        android:text="@string/textfield"
+        android:background="#DDD"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"/>
+
+
+
+    </NumberPicker>
 </RelativeLayout>
