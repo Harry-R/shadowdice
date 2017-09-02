@@ -24,6 +24,7 @@
         android:id="@+id/numpicker"
         android:layout_alignParentRight="true"
         android:layout_below="@id/txtv_headline">
+    </NumberPicker>
 
     <TextView
         android:layout_width="match_parent"
@@ -36,7 +37,4 @@
         android:layout_marginRight="8dp"
         android:padding="4dp"/>
 
-
-
-    </NumberPicker>
 </RelativeLayout>
