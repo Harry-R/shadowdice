@@ -29,12 +29,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/txtv_content"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/numpicker"
         android:layout_below="@id/txtv_headline"
-        android:text="@string/textfield"
+        android:layout_above="@+id/btn_rollDices"
         android:background="#DDD"
         android:layout_marginRight="8dp"
         android:padding="4dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/numpicker"
+        android:text="roll dices"
+        android:id="@+id/btn_rollDices"
+        android:onClick="btn_rollDices_onclick"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
