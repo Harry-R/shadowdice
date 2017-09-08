@@ -81,4 +81,14 @@ public class MainActivity extends AppCompatActivity {
     public void btn_rollDices_onclick(View v) {
         rollDices(numpicker.getValue());
     }
+
+
+    /**
+     * Clear text fields
+     * @param v view, that activated the on click listener
+     */
+    public void btn_clearLog_onClick(View v) {
+        txtv_headline.setText("");
+        txtv_content.setText("");
+    }
 }
