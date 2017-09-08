@@ -1,5 +1,6 @@
 package de.harryr.shadowdice;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     // declare UI elements
     NumberPicker numpicker;
     TextView txtv_content;
+    TextView txtv_headline;
 
     /**
      * Called on App creation, init the UI
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // init UI elements
         numpicker = (NumberPicker) findViewById(R.id.numpicker);
         txtv_content = (TextView) findViewById(R.id.txtv_content);
+        txtv_headline = (TextView) findViewById(R.id.txtv_headline);
 
         // set up numpicker
         numpicker.setMaxValue(30);
@@ -57,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 glitches++;
             }
         }
+        if (glitches > hits && hits == 0) {
+            txtv_headline.setText("Critical glitch!");
+            txtv_headline.setTextColor(Color.RED);
+        } else if (glitches > hits) {
+            txtv_headline.setText(" glitch!");
+            txtv_headline.setTextColor(Color.RED);
+        } else {
+            txtv_headline.setText(String.format("%d hits!", hits));
+            txtv_headline.setTextColor(Color.GREEN);
+        }
         txtv_content.setText(String.format("%s hits: %d glitches: %d\n", txtv_content.getText().toString(), hits, glitches));
     }
 
@@ -68,5 +81,4 @@ public class MainActivity extends AppCompatActivity {
     public void btn_rollDices_onclick(View v) {
         rollDices(numpicker.getValue());
     }
-    
 }
