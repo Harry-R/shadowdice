@@ -15,7 +15,7 @@
         android:text="@string/headline"
         android:id="@+id/txtv_headline"
         android:layout_marginBottom="16dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#000"/>
 
     <NumberPicker
@@ -45,14 +45,14 @@
         android:id="@+id/btn_clearLog"
         android:layout_toLeftOf="@id/numpicker"
         android:layout_alignParentBottom="true"
-        android:text="clear log"
+        android:text="@string/clear_log"
         android:onClick="btn_clearLog_onClick"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:text="roll dices"
+        android:text="@string/roll_dices"
         android:id="@+id/btn_rollDices"
         android:onClick="btn_rollDices_onclick"
         android:layout_alignParentBottom="true"

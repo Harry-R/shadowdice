@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     NumberPicker numpicker;
     TextView txtv_content;
     TextView txtv_headline;
+
 
     /**
      * Called on App creation, init the UI
@@ -52,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
             result = (rand.nextInt(6) + 1);
 
-            txtv_content.setText(String.format("%s %d ", txtv_content.getText().toString(), result));
+            txtv_content.setText(String.format(Locale.US, "%s %d ",
+                    txtv_content.getText().toString(), result));
 
             if (result >= 5) {
                 hits++;
@@ -60,17 +63,20 @@ public class MainActivity extends AppCompatActivity {
                 glitches++;
             }
         }
+
+        // check for (critical) glitch
         if (glitches > hits && hits == 0) {
-            txtv_headline.setText("Critical glitch!");
+            txtv_headline.setText(R.string.critical_glitch);
             txtv_headline.setTextColor(Color.RED);
         } else if (glitches > hits) {
-            txtv_headline.setText(" glitch!");
+            txtv_headline.setText(R.string.glitch);
             txtv_headline.setTextColor(Color.RED);
         } else {
-            txtv_headline.setText(String.format("%d hits!", hits));
+            txtv_headline.setText(String.format(Locale.US, "%d hits!", hits));
             txtv_headline.setTextColor(Color.GREEN);
         }
-        txtv_content.setText(String.format("%s hits: %d glitches: %d\n", txtv_content.getText().toString(), hits, glitches));
+        txtv_content.setText(String.format(Locale.US, "%s hits: %d glitches: %d\n",
+                txtv_content.getText().toString(), hits, glitches));
     }
 
 

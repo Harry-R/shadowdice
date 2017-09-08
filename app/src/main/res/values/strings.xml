@@ -2,4 +2,8 @@
     <string name="app_name">Shadowdice</string>
     <string name="headline">Headline</string>
     <string name="textfield">textfield</string>
+    <string name="clear_log">clear log</string>
+    <string name="roll_dices">roll dices</string>
+    <string name="critical_glitch">Critical glitch!</string>
+    <string name="glitch">Glitch!</string>
 </resources>
