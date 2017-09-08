@@ -12,8 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/headline"
         android:id="@+id/txtv_headline"
+        android:text="@string/welcome"
         android:layout_marginBottom="16dp"
         android:textSize="20sp"
         android:textColor="#000"/>
@@ -23,8 +23,9 @@
         android:layout_height="match_parent"
         android:id="@+id/numpicker"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/txtv_headline">
-    </NumberPicker>
+        android:layout_below="@id/txtv_headline"
+        android:descendantFocusability="blocksDescendants"/>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -36,7 +37,9 @@
         android:layout_above="@+id/btn_rollDices"
         android:background="#DDD"
         android:layout_marginRight="8dp"
-        android:padding="4dp" />
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:gravity="bottom" />
 
 
     <Button

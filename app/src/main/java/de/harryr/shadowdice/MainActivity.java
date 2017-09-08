@@ -3,6 +3,7 @@ package de.harryr.shadowdice;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -34,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         // set up numpicker
         numpicker.setMaxValue(30);
-        numpicker.setMinValue(0);
+        numpicker.setMinValue(1);
         numpicker.setWrapSelectorWheel(false);
+
+        txtv_content.setMovementMethod(new ScrollingMovementMethod());
     }
 
 
